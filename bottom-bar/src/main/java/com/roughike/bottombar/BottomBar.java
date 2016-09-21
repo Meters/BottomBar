@@ -66,17 +66,17 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
     private int maxFixedItemWidth;
 
     // XML Attributes
-    private int tabXmlResource;
-    private boolean isTabletMode;
-    private int behaviors;
-    private float inActiveTabAlpha;
-    private float activeTabAlpha;
-    private int inActiveTabColor;
-    private int activeTabColor;
-    private int badgeBackgroundColor;
-    private int titleTextAppearance;
-    private Typeface titleTypeFace;
-    private boolean showShadow;
+    public int tabXmlResource;
+    public boolean isTabletMode;
+    public int behaviors;
+    public float inActiveTabAlpha;
+    public float activeTabAlpha;
+    public int inActiveTabColor;
+    public int activeTabColor;
+    public int badgeBackgroundColor;
+    public int titleTextAppearance;
+    public Typeface titleTypeFace;
+    public boolean showShadow;
 
     private View backgroundOverlay;
     private ViewGroup outerContainer;
@@ -239,7 +239,7 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
         updateItems(parser.getTabs());
     }
 
-    private BottomBarTab.Config getTabConfig() {
+    public BottomBarTab.Config getTabConfig() {
         return new BottomBarTab.Config.Builder()
                 .inActiveTabAlpha(inActiveTabAlpha)
                 .activeTabAlpha(activeTabAlpha)
