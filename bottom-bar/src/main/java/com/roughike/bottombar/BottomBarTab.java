@@ -70,7 +70,7 @@ public class BottomBarTab extends LinearLayout {
         FIXED, SHIFTING, TABLET
     }
 
-    BottomBarTab(Context context) {
+    public BottomBarTab(Context context) {
         super(context);
 
         sixDps = MiscUtils.dpToPixel(context, 6);
