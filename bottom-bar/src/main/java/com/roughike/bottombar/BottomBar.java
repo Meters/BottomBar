@@ -344,6 +344,10 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
         }
     }
 
+    public OnTabSelectListener getOnTabSelectListener(){
+        return onTabSelectListener;
+    }
+
     /**
      * Set a listener that gets fired when a currently selected tab is clicked.
      *
@@ -351,6 +355,10 @@ public class BottomBar extends LinearLayout implements View.OnClickListener, Vie
      */
     public void setOnTabReselectListener(@Nullable OnTabReselectListener listener) {
         onTabReselectListener = listener;
+    }
+
+    public OnTabReselectListener getOnTabReselectListener(){
+        return onTabReselectListener;
     }
 
     /**
