@@ -107,7 +107,7 @@ class TabParser {
                     }
 
                 default:
-                    workingTab.extras.put(attrName, getTitleValue(i, parser))
+                    workingTab.extras.put(attrName, getTitleValue(i, parser));
                     break;
             }
         }
