@@ -105,6 +105,9 @@ class TabParser {
                     if (badgeBackgroundColor != null) {
                         workingTab.setBadgeBackgroundColor(badgeBackgroundColor);
                     }
+
+                default:
+                    workingTab.extras.put(attrName, getTitleValue(i, parser))
                     break;
             }
         }
