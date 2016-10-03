@@ -157,8 +157,8 @@ class BottomBarBadge extends TextView {
             xOffset /= 1.25;
         }
 
-        setX(iconView.getX() + xOffset);
-        setTranslationY(10);
+        setX(iconView.getX());
+        setTranslationY(5);
 
         if (params.width != size || params.height != size) {
             params.width = size;
