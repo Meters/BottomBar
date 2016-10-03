@@ -300,6 +300,7 @@ public class BottomBarTab extends LinearLayout {
 //            badge.getTextSize();
             Log.d("Badge Text Size : ", String.valueOf(badge.getTextSize()));
             badge.setTextSize(MiscUtils.dpToPixel(getContext(), 8f));
+            Log.d("Badge Text Size : ", String.valueOf(badge.getTextSize()));
             badge.attachToTab(this, badgeBackgroundColor);
         }
 
