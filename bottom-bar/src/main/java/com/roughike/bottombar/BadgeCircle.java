@@ -46,8 +46,8 @@ class BadgeCircle {
      */
     static ShapeDrawable make(int size, int color) {
         ShapeDrawable indicator = new ShapeDrawable(new OvalShape());
-        indicator.setIntrinsicWidth(size);
-        indicator.setIntrinsicHeight(size);
+        indicator.setIntrinsicWidth(size/4);
+        indicator.setIntrinsicHeight(size/4);
         indicator.getPaint().setColor(color);
         return indicator;
     }

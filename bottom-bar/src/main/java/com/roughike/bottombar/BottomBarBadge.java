@@ -109,7 +109,7 @@ class BottomBarBadge extends TextView {
 
     void setColoredCircleBackground(int circleColor) {
         int innerPadding = MiscUtils.dpToPixel(getContext(), 1);
-        ShapeDrawable backgroundCircle = BadgeCircle.make(innerPadding * 3, circleColor);
+        ShapeDrawable backgroundCircle = BadgeCircle.make(innerPadding * 2, circleColor);
         setPadding(innerPadding, innerPadding, innerPadding, innerPadding);
         setBackgroundCompat(backgroundCircle);
     }
@@ -157,7 +157,7 @@ class BottomBarBadge extends TextView {
             xOffset /= 1.25;
         }
 
-        setX(iconView.getX() + xOffset);
+        setX(iconView.getX() + xOffset / 2 + 1);
         setTranslationY(10);
 
         if (params.width != size || params.height != size) {

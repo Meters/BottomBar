@@ -14,6 +14,7 @@ import android.support.annotation.VisibleForTesting;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v7.widget.AppCompatImageView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -302,6 +303,10 @@ public class BottomBarTab extends LinearLayout {
 
         if (badge == null) {
             badge = new BottomBarBadge(getContext());
+//            badge.getTextSize();
+            Log.d("Badge Text Size : ", String.valueOf(badge.getTextSize()));
+            badge.setTextSize(MiscUtils.dpToPixel(getContext(), 2f));
+            Log.d("Badge Text Size : ", String.valueOf(badge.getTextSize()));
             badge.attachToTab(this, badgeBackgroundColor);
         }
 
