@@ -19,6 +19,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 /*
  * BottomBar library for Android
  * Copyright (c) 2016 Iiro Krankka (http://github.com/roughike).
@@ -66,16 +68,20 @@ public class BottomBarTab extends LinearLayout {
     private int titleTextAppearanceResId;
     private Typeface titleTypeFace;
 
+    public HashMap<String, String> extras;
+
     enum Type {
         FIXED, SHIFTING, TABLET
     }
 
-    BottomBarTab(Context context) {
+    public BottomBarTab(Context context) {
         super(context);
 
         sixDps = MiscUtils.dpToPixel(context, 6);
         eightDps = MiscUtils.dpToPixel(context, 8);
         sixteenDps = MiscUtils.dpToPixel(context, 16);
+
+        extras = new HashMap<>();
     }
 
     void setConfig(Config config) {
